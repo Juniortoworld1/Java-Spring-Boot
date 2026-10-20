@@ -8,6 +8,9 @@ public class App {
     public void main(String[] args){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationBeanContext.xml") ;
         MyBeans myBeans = (MyBeans) applicationContext.getBean("myBeans") ;
+
+        System.out.println(myBeans);
+
         myBeans.setMessage("this is the last message i'm sending");
         System.out.println(myBeans);
     }
